@@ -1,0 +1,33 @@
+<nav class="flex justify-around items-center py-4 px-6 bg-white shadow-md">
+        <!-- Left section -->
+        <div class="flex items-center space-x-2">
+            <!-- Logo -->
+            <img src="../../assets/logoImg.svg" alt="Logo" class="h-10 w-36">
+            <span class="text-gray-800 font-semibold hidden md:visible">Other</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4 text-gray-600 hidden md:visible">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+        </div>
+
+        <!-- Right section -->
+        <div class="flex items-center space-x-2 md:space-x-6">
+            <a href="#" class="text-gray-800 hidden md:flex md:items-center  lg:visible"><i class="fa-solid fa-tv fa-rotate-180 mr-2" style="color: #2c2d30;"></i>  Swiggy Corporate
+            </a>
+            <a href="#" class="text-gray-800 " ><i class="fa-solid fa-sm fa-magnifying-glass " style="color: #323334;"></i> Search</a>
+            <a href="#" class="text-gray-800  hidden md:flex md:items-center md:visible">
+                <i class="fa-solid fa-tag fa-rotate-90 mr-1" style="color: #27282a;"></i> Offers
+                <span class="text-xs bg-yellow-400 text-white px-2 py-1 ml-1 rounded-full">NEW</span>
+            </a>
+            <a href="#" class="text-gray-800  hidden md:visible">Help</a>
+            <a href="#" class="text-gray-800" *ngIf="!checkLogin"> <i class="fa-sharp fa-regular fa-user" style="color: #1d1e20;"></i><button  (click)="LoginPage()">Login</button></a>
+            <a href="#" class="text-gray-800" *ngIf="checkLogin"> <i class="fa-sharp fa-regular fa-user" style="color: #1d1e20;"></i><button (click)="onLogout()">Logout</button></a>
+
+            <a routerLink="/dashboard/cart" routerLinkActive class="text-gray-800 relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18M3 21h18M7 10h10M7 14h10M5 6h14l2 14H3L5 6z" />
+                </svg>
+                <span class="absolute -top-1 -right-2 bg-gray-800 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">{{cartItems.length}}</span>
+            </a>
+        </div>
+</nav>
+

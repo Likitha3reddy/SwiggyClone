@@ -1,0 +1,58 @@
+<section >
+    <nav class="flex justify-between  items-center py-4 ">
+        <div >
+            <a href="/">
+                <img src="../../assets/headerImages/swiggy_logo.png" alt="swiggy_logo" class="h-10 ">
+            </a>
+        </div>
+        <div class=" text flex items-center  gap-2 lg:gap-8 font-bold text-white ">
+            <a href="">Swiggy Corporate</a>
+            <a href="">Partner with us</a>
+            <a href="" class="px-4 py-3 rounded-lg ">Get the App <i class="fa-solid fa-arrow-right fa-rotate-by" style="--fa-rotate-angle: 315deg;"> </i></a>
+            <button type="button" (click)="onSignupClick()" class="px-5 py-3 bg-black rounded-lg">SignUp</button>
+        </div>
+    </nav>
+    <main>
+        <!--image 1-->
+        <div class="absolute  left-0  sm: w-36 lg:w-44 lg:bottom-2/3 xl:w-60 xl:bottom-24">
+            <img src="../../assets/headerImages/vegies_header_img.avif" alt="">
+        </div>
+        <!-- Heading Section -->
+
+        <div class=" text-center pt-10 pb-5 headiv">
+            <h3 class="text-white text-4xl font-semibold">Order food. Shop groceries. Swiggy it!</h3>
+        </div>
+
+        <!-- Search Sections -->
+        <div class=" searchdiv py-4 flex md:flex justify-center items-center flex-wrap">
+            <!-- Location Input -->
+            <div class="flex bg-white items-center justify-evenly gap-2 p-4 rounded-xl shadow-md mx-4 ">
+                <i class="fa-sm fa-location-dot fa-solid text-orange-500"></i>
+                <input type="text" placeholder="Enter your delivery location" class="w-2/3 focus:outline-none text-gray-700">
+                <i class="fas fa-chevron-down text-gray-500"></i>
+            </div>
+
+            <!-- Search Input -->
+            <div class="flex bg-white items-center justify-evenly gap-2 p-4 rounded-xl shadow-md mx-4 ">
+                <input type="text" placeholder="Search for restaurants, items or more" class="w-2/3 focus:outline-none text-gray-700">
+                <i class="fa-solid fa-magnifying-glass text-gray-500" ></i>
+            </div>
+        </div>
+        <div class="flex cards">
+            <div class="cursor-pointer">
+                <a routerLink="/dashboard"><img src="../../assets/headerImages/restaurants_foodDelivery_img.avif" alt="foodDelivery"></a>
+            </div>
+            <div class="cursor-pointer">
+                <a routerLink="/dashboard"><img src="../../assets/headerImages/genie_pickUp_img.avif" alt="pickUp_img">
+                </a>
+            </div>
+        </div>
+        <!--sushi image-->
+        <div class="absolute  w-28 sm:w-32 top-20 right-0 lg:w-56">
+            <img src="../../assets/headerImages/sushi_Img.avif" alt=" sushi_Img">
+        </div>
+    </main>
+</section>
+
+
+

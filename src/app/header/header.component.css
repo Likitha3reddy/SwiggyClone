@@ -1,0 +1,64 @@
+body{
+    overflow-y: hidden;
+}
+section{
+    height:fit-content;
+    background-color: rgb(255,82,0,1);
+    width: 100%;
+}
+nav{
+    width: 80%;
+    margin: auto;
+    font-family: Gilroy;
+}
+.text :nth-child(3){
+    border: 1px solid white;
+}
+@media (max-width:780px){
+    nav{
+        width: 95%;
+        margin:auto ;
+    }
+}
+@media (max-width:777px){
+ .text :nth-child(1){
+    display: none;
+ }
+ .text :nth-child(2){
+    display: none;
+ }
+}
+@media (max-width:390px){
+    .text :nth-child(3){
+        display: none;
+    }
+}
+.headiv{
+    width: 60%;
+    margin: auto;
+}
+h3{
+    width: 55%;
+    margin: auto;
+}
+@media (max-width:558px){
+    .searchdiv :nth-child(1){
+        margin-bottom: 5px;
+    }
+}
+input:focus,
+input:active {
+    border: none;
+    outline: none; /* This removes the default focus outline */
+    box-shadow: none; /* Removes any shadow effect */
+}
+input::placeholder {
+    font-size: 14px; /* Adjust to fit within the input width */
+    color: #999; /* Optional: Placeholder text color */
+    font-weight: 800;
+}
+.cards{
+    width: 80%;
+    margin: auto;
+}
+

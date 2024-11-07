@@ -1,0 +1,22 @@
+.showMore{
+    border:1px solid rgb(182, 181, 181);
+    width: fit-content;
+    color: rgb(255,82,0);
+    /* background-color: aqua; */
+    width: 90%;
+    
+}
+.show,.hide,.hide1{
+   border: 1px solid rgb(182, 181, 181);
+   width:100%
+
+}
+.maindiv{
+    width: 90%;
+    /* background-color: aqua; */
+    margin-right: auto;
+    
+}
+h4{
+    font-size: 16px;
+}

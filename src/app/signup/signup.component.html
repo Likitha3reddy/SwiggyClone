@@ -1,0 +1,70 @@
+<div class="sidebar-overlay sidebar" *ngIf="isVisible && !isSignUppage  " >
+  <div class="sidebar-content">
+    <button class="close-btn " (click)="closeSidebar()" ><i class="fa-solid fa-xmark fa-lg" style="color: #3c3939;"></i></button>
+    
+    <!-- Login Form -->
+    <div class="flex justify-between  items-center">
+      <div >
+        <h2 class="pt-12 pb-2 text-3xl font-semibold opacity-80">Login</h2>
+        <p><a href="#" class="signupaccount text-xs">or <button (click)="signuppage()">create an account</button></a></p>
+        <div class=" w-11 bg-black line my-3"></div>
+      </div>
+      <div class="w-24">
+        <img src="../../assets/signupLoginImg/loginImg.avif" alt="signup_Image">
+      </div>
+    </div>
+    <form (submit)="onLogin()">
+      <input type="text" id="phone" placeholder="phone number" [(ngModel)]="phoneNumber" name="phoneNumber" required>
+      <button type="submit">LOGIN</button>
+    </form>
+    
+    <p class="text-xs text-gray-500 mt-3">
+      By clicking on Login, I accept the <a href="#">Terms & Conditions</a> & <a href="#">Privacy Policy</a>
+    </p>
+  </div>
+</div>
+
+<!--signup-->
+
+<div class="sidebar-overlay sidebar" *ngIf="isSignUppage">
+  <div class="sidebar-content">
+    <button class="close-btn " (click)="closeSidebar()" ><i class="fa-solid fa-xmark fa-lg" style="color: #3c3939;"></i></button>
+    
+    <!-- Login Form -->
+    <div class="flex justify-between  items-center">
+      <div >
+        <h2 class="pt-12 pb-2 text-3xl font-semibold opacity-80">SignUp</h2>
+        <p><a href="#" class="signupaccount text-xs">or <button (click)="loginUppage()" >Login to your account</button></a></p>
+        <div class=" w-11 bg-black line my-3"></div>
+      </div>
+      <div class="w-24">
+        <img src="../../assets/signupLoginImg/loginImg.avif" alt="signup_Image">
+      </div>
+    </div>
+    <form class="mt-4" (submit)="onSignup()">
+      <div class="mb-4">
+          <input type="tel" id="phone"class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-orange-500 focus:border-orange-500" placeholder=" Phone number" [(ngModel)]="phoneNumber" name="phoneNumber" required>
+      </div>
+
+      <div class="mb-4">
+          <input type="text" id="name"  class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-orange-500 focus:border-orange-500" placeholder="name" [(ngModel)]="name" name="name" required>
+      </div>
+
+      <div class="mb-4">
+          <input type="email" id="email"  class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-orange-500 focus:border-orange-500" placeholder=" Email" [(ngModel)]="email" name="email" required>
+      </div>
+
+      <div class="flex items-center justify-between mb-4">
+          <a href="#" class="text-sm text-orange-500 hover:underline">Have a referral code?</a>
+      </div>
+
+      <button type="submit" class="w-full bg-orange-500 text-white py-2 rounded-md font-semibold hover:bg-orange-600 transition">CONTINUE</button>
+
+      <p class="text-xs text-gray-500 mt-3">
+          By creating an account, I accept the <a href="#" class="text-orange-500 hover:underline">Terms & Conditions</a> & <a href="#" class="text-orange-500 hover:underline">Privacy Policy</a>
+      </p>
+  </form>
+  </div>
+</div>
+
+

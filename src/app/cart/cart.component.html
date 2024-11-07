@@ -1,0 +1,41 @@
+<app-dashboardheader></app-dashboardheader>
+<div class="text-center text-danger  pt-12 " *ngIf="cartData.length===0">
+    <h1 class="text-red-600 font-semibold text-5xl mb-12">Cart Empty</h1>
+    <button class="btn bg-orange-600 p-4 mb-10 text-white" routerLink="/dashboard" routerLinkActive>Go to products page</button>
+</div>
+<div class="text-center text-red-500 my-5 container" *ngIf="cartData.length>0"> 
+    <table class="table-auto w-2/3 m-auto border-collapse border border-gray-300">
+        <thead>
+            <tr class="hover:bg-slate-400 bg-gray-200">
+                <th class="border-b-2 border-gray-300 px-4 py-2">Sr.No</th>
+                <th class="border-b-2 border-l border-gray-300 px-4 py-2">Product</th>
+                <th class="border-b-2 border-l border-gray-300 px-4 py-2">Image</th>
+                <th class="border-b-2 border-l border-gray-300 px-4 py-2">Hotel</th>
+                <th class="border-b-2 border-l border-gray-300 px-4 py-2">Qty</th>
+                <th class="border-b-2 border-l border-gray-300 px-4 py-2">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-gray-700" *ngFor="let x of cartData; let i=index">
+                <td class="border-t border-gray-300 px-4 py-2 text-center">{{i+1}}</td>
+                <td class="border-t border-l border-gray-300 px-4 py-2">{{x.title}}</td>
+                <td class="border-t border-l border-gray-300 px-4 py-2">
+                    <img [src]="x.img" [alt]="x.hotelName" class="w-full h-24 object-cover">
+                </td>
+                <td class="border-t border-l border-gray-300 px-4 py-2">{{x.hotelName}}</td>
+                <td class="border-t border-l border-gray-300 px-4 py-4 text-center flex justify-center items-center">
+                    <button class="px-2  bg-red-500 text-white text-2xl text-center" (click)="dec(i)" [disabled]="val === 0">-</button>
+                    <span>{{x.quantity}}</span> 
+                    <button class="px-2  bg-green-500 text-white text-2xl text-center" (click)="inc(i)">+</button></td>
+                <td class="border-t border-l border-gray-300 px-4 py-2 text-center">{{x.price *x.quantity}}</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="border-t border-gray-300 px-4 py-2 text-right font-bold">Total Items Cost</td>
+                <td class="border-t border-l border-gray-300 px-4 py-2 text-center font-bold">{{ calculateTotalCost() }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>
+
+

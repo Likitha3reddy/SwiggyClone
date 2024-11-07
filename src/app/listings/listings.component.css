@@ -1,0 +1,16 @@
+section{
+    font-family: Gilroy;
+}
+.maindiv{
+    width: 80%;
+    margin: auto;
+    /* background-color: yellowgreen; */
+    overflow: hidden;
+}
+ .maindiv img{
+    width: 200px;
+
+}
+.getApp{
+    width: 100%;
+}
